@@ -1,0 +1,18 @@
+/*estilos 
+
+header {
+    max-width: 80vw;
+    height: 100vh;
+    margin-left: 60px;
+}
+
+.main-container {
+display: grid;
+justify-items: center;
+grid-template - pesquisar opções
+grid-gap: 8px;
+gap: 8px;
+
+cards {
+position: relative;
+overflow - pesquisar;
