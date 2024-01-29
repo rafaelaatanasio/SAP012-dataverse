@@ -3,41 +3,55 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.svg" />
   <title>Rota dos Sonhos</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/b8f3ef2ad6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <header>
     <h1>Rota dos Sonhos</h1>
   </header>
-
-  <main>
-    <div class="main-container">
-      <header>
-        <h2>24 destinos para conhecer no Brasil!</h2>
-        <select id="organizer">
+  <div id="search-section">
+    <div id="org-section">
+      <i class="fa-solid fa-arrow-up-short-wide"></i>
+      <label for="organizer">Organizar</label>
+      <select id="organizer" name="organizar" data-testid="selecionar-ordenar">
+        <option value="select-option"></option>
+        <option value="asc">A-Z</option>
+        <option value="desc">Z-A</option>
+      </select>
+    </div>
+    <div id="filter-section">
+      <i class="fa-solid fa-filter"></i>
+      <label for="filters">Filtrar</label>
+      <select id="filters" name="filtrar" data-testid="selecionar-filtro">
+        <optgroup label="Estados" value="states">
+          <option value="select-option"></option>
+        </optgroup>
+        <optgroup label="Itinerário" value="itinerary">
           <option></option>
-          <option>A-Z</option>
-          <option>Z-A</option>
-          <option>Aleatório</option>
-        </select>
-        <select id="filter" name="Filtrar">
-          <optgroup label="Estados">
-            <option></option>
-          </optgroup>
-          <optgroup label="Itinerário">
-            <option></option>
-          </optgroup>
-          <optgroup label="Atividades">
-            <option></option>
-          </optgroup>
-          <optgroup label="Valor estimado">
-            <option></option>
-          </optgroup>
-        </select>
-      </header>
-      <div id="cards"></div>
+        </optgroup>
+        <optgroup label="Atividades" value="activities">
+          <option></option>
+        </optgroup>
+        <optgroup label="Valor estimado" value="cost">
+          <option></option>
+        </optgroup>
+      </select>
+    </div>
+    <div id="button-section">
+      <button id="clear-button" data-testid="botao-limpar" value="clear-search">Limpar Busca</button>
+    </div>
+  </div>
+  <main>
+    <div id="second-title">
+      <h2>24 destinos para conhecer no Brasil!</h2>
+    </div>
+    <div id="root" class="main-container">
     </div>
   </main>
 
