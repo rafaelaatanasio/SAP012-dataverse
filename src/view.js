@@ -10,7 +10,7 @@ export const renderItems = (data) => {
     <li itemprop="itemListElement" itemscope itemtype: "https://schema.org/ListItem">
     <a itemprop="item" href="./data/dataset.js">
     <span itemprop="name"></span></a>
-    <meta itempro="position" content="3" />
+    <meta itemprop="position" content="3" />
     </li>
     `)
 

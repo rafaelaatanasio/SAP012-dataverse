@@ -21,7 +21,7 @@ export default [
     name: "Chapada Diamantina",
     shortDescription: "Exploração de grutas e cachoeiras em paisagem deslumbrante. Ideal para aventuras e contato com a natureza.",
     description: "A Chapada Diamantina, situada na Bahia, é famosa por suas trilhas desafiadoras, cavernas fascinantes e cachoeiras incríveis. Com um clima ameno e uma atmosfera acolhedora, é ideal para mulheres e pessoas LGBT que buscam aventura e contato com a natureza. Oferece atividades que vão desde trekking até banhos relaxantes em piscinas naturais. Além das atividades citadas, a Chapada Diamantina proporciona uma viagem gastronômica, destacando pratos regionais e ingredientes locais. Explore essa região encantadora e descubra cada faceta de sua beleza natural. Saiba mais sobre esse destino único!",
-    imageUrl: "https://uploads.metropoles.com/wp-content/uploads/2021/05/13172617/cachoeira-do-buracao.jpg",
+    imageUrl: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/95/76/49/cachoeira-do-buracao.jpg",
     facts: {
       brState: "BA",
       someFeatures: "montanha/serra, cachoeira",
@@ -69,7 +69,7 @@ export default [
     name: "Parque Nacional da Chapada dos Veadeiros",
     shortDescription: "Preservação ambiental, cachoeiras magníficas, localizado no coração do Brasil, um destino imperdível para amantes da natureza.",
     description: "O Parque Nacional da Chapada dos Veadeiros, localizado em Goiás, é um refúgio ecológico que surpreende visitantes com suas cachoeiras deslumbrantes e trilhas desafiadoras. Ideal para mulheres e pessoas LGBT amantes da natureza, oferece a oportunidade de explorar a diversidade da flora e fauna local. Os melhores meses para visitação são de Maio a Setembro, quando as condições climáticas são mais favoráveis. Desfrute de uma experiência única em meio a uma das mais belas paisagens do Brasil. Mais informações sobre o parque podem ser encontradas aqui.",
-    imageUrl: "https://s2-g1.glbimg.com/YWGwGm5tY4XyNmNoSBWI57vKWdU=/0x0:3533x2358/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2017/j/H/HkV6EdR5qOVFkqB7uW4Q/cachoeira-almecegas-1-chapada-dos-veadeiros-go.jpg",
+    imageUrl: "https://www.inthemine.com.br/site/wp-content/uploads/2022/06/Foto2.jpg",
     facts: {
       brState: "GO",
       someFeatures: "montanha/serra, cachoeira",
@@ -165,7 +165,7 @@ export default [
     name: "São Miguel dos Milagres",
     shortDescription: "Praias tranquilas, piscinas naturais, localizado em Alagoas, oferece um refúgio de tranquilidade em meio a paisagens paradisíacas.",
     description: "São Miguel dos Milagres, em Alagoas, oferece praias tranquilas e piscinas naturais ideais para mulheres e pessoas LGBT em busca de paz e beleza natural. Relaxe em águas calmas e aproveite a tranquilidade do local. Melhores meses: Setembro a Março. Descubra as belezas subaquáticas fazendo snorkeling e mergulho. Conheça as piscinas naturais de Toque Beach e desfrute de passeios de jangada. A culinária local oferece frutos do mar frescos e pratos típicos da região. São Miguel dos Milagres proporciona uma experiência relaxante em meio à natureza. Mais informações aqui.",
-    imageUrl: "https://mli2h0nxjnsd.i.optimole.com/w:1093/h:544/q:mauto/ig:avif/f:best/https://www.angahotel.com.br/wp-content/uploads/2022/02/sao-miguel-dos-milagres-2.jpg",
+    imageUrl: "https://s3q7j5f5.stackpathcdn.com/wp-content/uploads/2022/08/sao-miguel-dos-milagres-1.jpg",
     facts: {
       brState: "AL",
       someFeatures: "praia",
@@ -357,7 +357,7 @@ export default [
     name: "Curitiba",
     shortDescription: "Capital ecológica, parques, cultura, localizado no Paraná, é uma cidade vibrante que combina modernidade e preservação ambiental.",
     description: "Curitiba, no Paraná, é uma capital ecológica com parques e cultura vibrante. Ideal para mulheres e pessoas LGBT que apreciam uma cidade sustentável. Visite o Jardim Botânico, explore o Museu Oscar Niemeyer e desfrute da culinária local. Encante-se com a diversidade cultural, manifestada em festivais e eventos ao longo do ano. Em Dezembro a Março, aproveite o clima agradável para explorar parques e espaços verdes. Conheça a cena artística local em galerias e eventos culturais. Descubra a arquitetura única da cidade, que mescla tradição e modernidade. Mais informações aqui.",
-    imageUrl: "https://s2-redeglobo.glbimg.com/FYhOsy-jVbAzlPrj601x7CvnI-c=/0x0:1000x650/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2023/U/I/oEAiB6TSu3ikXqFXNiaw/mg-5733.jpg",
+    imageUrl: "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-curitiba-capa2019-02.jpg",
     facts: {
       brState: "PR",
       someFeatures: "urbano",
@@ -373,7 +373,7 @@ export default [
     name: "Santarém",
     shortDescription: "Encontro das águas, cultura, localizado na Amazônia, git statusé uma cidade que encanta pela diversidade cultural e pelas belezas naturais.",
     description: "Santarém, no coração da Amazônia, é conhecida pelo encontro das águas do Rio Tapajós e Amazonas. Perfeito para mulheres e pessoas LGBT que desejam explorar a biodiversidade e a cultura local. Visite a Ilha do Amor, conheça a Floresta Nacional do Tapajós e aproveite as festividades locais. Mergulhe em tradições indígenas, explore mercados e descubra a riqueza natural desta região. Os melhores meses para visitar são de Julho a Novembro, quando o clima é mais estável. Conheça a gastronomia regional, experimentando pratos típicos e ingredientes exóticos. A Amazônia te espera com uma experiência autêntica e inesquecível. Mais informações aqui.",
-    imageUrl: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/0a/82/e6/5e.jpg",
+    imageUrl: "https://santarem.pa.gov.br/storage/posts/March2022/alter-do-chao-2zymsB.jpg",
     facts: {
       brState: "PA",
       someFeatures: "rio, floresta/mata",
