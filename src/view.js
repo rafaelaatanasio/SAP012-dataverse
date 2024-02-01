@@ -1,24 +1,70 @@
 export const renderItems = (data) => {
-  console.log(data)
-  //Tentei declarar uma variável para que seja possível modificar a estrutura de <main>;
-  //const principal = document.querySelector("[class='main-container']");
+  // Outra lógica, dessa vez usando forEach. Porém, não aparece.
+  // const cardsContent = document.querySelectorAll('#root .content');
+  //   cardsContent.forEach((place) => {
+  //     place.innerHTML = `
+  //   <ul itemscope itemtype="https://schema.org/TouristTrip">
+  //     <li class="presentation" itemscope itemtype:"${place.id}">
+  //     <section class="basic-infos">
+  //     <img itemprop="imageUrl" src="${place.imageUrl}" alt="${place.name}">
+  //     <h2 itemprop="name">${place.name}</h2>
+  //     <h3 itemprop="brState">${place.facts.brState}</h3>
+  //     <p itemprop="bestActivities">${place.facts.bestActivities}</p>
+  //      <button onclick="maisInfos()">+ Infos</button>
+  //      </section>
+  //      <section class="mais-infos" id="infos-${place.id}">
+  //      
+  //     </li>
+  //   </ul>
+  //     `;
+  //   })
 
 
-  //Tentei construir um código usando microdados para puxar as infos de dataset.js e colocar dentro do html, para que possam aparecer na página. Porém, ainda não entendi muito bem como fazer. Fia mais para entender a lógica.
-  document.getElementById("cards").innerHTML = data./*o que colocar aqui?*/.map((item /*declarar aqui o parâmetro, mas qual?*/) => `
-  <ul itemscope itemtype="https://schema.org/TouristTrip">
-    <li itemprop="itemListElement" itemscope itemtype: "https://schema.org/ListItem">
-    <a itemprop="item" href="./data/dataset.js">
-    <span itemprop="name"></span></a>
-    <meta itemprop="position" content="3" />
-    </li>
-    `)
 
-  //É preciso construir uma forma de renderizar os objetos para que apareçam na página
-  /*< div itemscope >
-    <ul>
-      <li></li>
-    </ul >
-  Aquí comienza tu código y puedes retornar lo que tu necesites*/
-  return 'example';
+
+  // document.querySelectorAll('#root .content').textContent = data.map((place) => `
+  // <ul itemscope itemtype="https://schema.org/TouristTrip">
+  //   <li itemscope itemtype: "https://schema.org/ListItem">
+  //   <h2>${place.name}</h2>
+  //   <h3>${place.facts.brState}</h3>
+  //   <p>${place.facts.bestActivities}</p>
+  //   <a href="#">+ Infos</a>
+  //   </li>
+  //   </ul>
+  //   `)
+
+  //console.log(cards);
+
+  //   const placeImg = 
+  //   const placeName
+  //   const placeLocation
+  //   const placeActivities
+  //   const placeInfos
+
+  //   //Tentei construir um código usando microdados para puxar as infos de dataset.js e colocar dentro do html, para que possam aparecer na página. Porém, ainda não entendi muito bem como fazer. Fia mais para entender a lógica.
+  //   document.getElementById("root").innerHTML = data.map((places) => {
+  //     return {`
+  //       imageUrl: places.imageUrl,
+  //       name: places.name,
+  //       brState: places.facts.brState,
+  //       bestActivities: places.facts.bestActivities`
+  //   }
+  //   })
 };
+
+// Outra possibilidade de código
+// document.getElementById("root")
+//const cardsContainer = document.getElementById("root");
+
+// Aqui, todo o conteúdo do banco de dados apareceu no primeiro card.. Mas pelo menos apareceu
+// document.querySelector('#root .container').innerHTML = data.map((place) => `
+//   <ul itemscope itemtype="https://schema.org/TouristTrip">
+//     <li itemprop="itemListElement" itemscope itemtype: "https://schema.org/ListItem">
+//     <img src=${place.imageUrl}>
+//     <h2>${place.name}</h2>
+//     <h3>${place.facts.brState}</h3>
+//     <p>${place.facts.bestActivities}</p>
+//     <meta itemprop="position" content="3" />
+//     </li>
+//     </ul>
+//     `)
