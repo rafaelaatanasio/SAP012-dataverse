@@ -1,4 +1,31 @@
 export const renderItems = (data) => {
+  console.log(data);
+  // OH coletiva Moni
+  // return `<ul>
+  // <li>card1</li>
+  // <li>card2</li>
+  //`;
+
+  //usar loop para inserir os dados
+  // map, for, forEach
+  // criar uma variável que vai armazenar a nossa string final
+  // loop para add cada card
+  // retornar variável criada
+  // let resultado = "<ul>"
+  // loop para adicionar os <li> dos cards:
+  // data.forEach((elemento) => console.log(name.elemento));
+  // data.forEach((elemento) => {
+  // resultado += `
+  //<li>
+  //<h1>${elemento.name}</h1>
+  //<img src=${elemento.imageUrl}>
+  //<div>${elemento.facts.birth}</div>
+  //</li>
+  //`
+  //)}
+  // no final adicionar o fechamento da <ul>:
+  // let resultado - resultado + "</ul>"
+
   // Outra lógica, dessa vez usando forEach. Porém, não aparece.
   // const cardsContent = document.querySelectorAll('#root .content');
   //   cardsContent.forEach((place) => {
@@ -68,3 +95,5 @@ export const renderItems = (data) => {
 //     </li>
 //     </ul>
 //     `)
+
+//return 'example';
