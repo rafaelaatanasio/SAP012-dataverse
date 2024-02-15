@@ -1,24 +1,26 @@
 export const renderItems = (data) => {
-  console.log(data)
-  //Tentei declarar uma variável para que seja possível modificar a estrutura de <main>;
-  //const principal = document.querySelector("[class='main-container']");
+  // console.log(data)
 
+  let ul = '<ul>';
 
-  //Tentei construir um código usando microdados para puxar as infos de dataset.js e colocar dentro do html, para que possam aparecer na página. Porém, ainda não entendi muito bem como fazer. Fia mais para entender a lógica.
-  document.getElementById("cards").innerHTML = data./*o que colocar aqui?*/.map((item /*declarar aqui o parâmetro, mas qual?*/) => `
-  <ul itemscope itemtype="https://schema.org/TouristTrip">
-    <li itemprop="itemListElement" itemscope itemtype: "https://schema.org/ListItem">
-    <a itemprop="item" href="./data/dataset.js">
-    <span itemprop="name"></span></a>
-    <meta itemprop="position" content="3" />
-    </li>
-    `)
+  data.forEach((item) => {
+    ul += `
+      <li itemscope itemtype="Rota dos Sonhos" class="container__card">
+        <div class="content__card">
+          <dl itemscope itemtype="RoteirosDosSonhos">
+            <dt><img src="${item.imageUrl}" alt="Imagem do Destino" itemprop="${item.name}" class="image__card" /></dt>
+            <dd itemprop="sort-order" class="someFeatures">${item.facts.someFeatures}</dd>
+            <dd itemprop="name" class="name">${item.name} - ${item.facts.brState}</dd>
+            <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
+            <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
+            <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
+            <button class='btn-verMais'><dt>Ver mais</dt><dd itemprop="verMais"></dd></button>
+          </dl>
+        </div>
+      </li>
+    `;
+  });
 
-  //É preciso construir uma forma de renderizar os objetos para que apareçam na página
-  /*< div itemscope >
-    <ul>
-      <li></li>
-    </ul >
-  Aquí comienza tu código y puedes retornar lo que tu necesites*/
-  return 'example';
+  ul += "</ul>"
+  return ul;
 };

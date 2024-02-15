@@ -1,53 +1,26 @@
-/* reset.css */
-
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-    margin: 0;
-}
-
-/* Remove list styles (bullets and numbering) */
-ul,
-ol {
-    padding: 0;
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     list-style: none;
+    align-content: center;
+    justify-content: space-around;
+    row-gap: 30px; /* espaço entre as linhas */
 }
 
-/* Remove default padding */
-blockquote,
-figure,
-p {
-    padding: 0;
+/* terminar inserir (li e os demais dd dl que quiser...) e estilizar na ordem de aparição que escolhemos no view/terminal */
+
+.someFeatures {
+    color: #79e72f;
 }
 
-/* Set default font size and line height */
-body {
-    font-size: 16px;
-    line-height: 1.5;
-}
+.image__card {
+    max-width: 400px; /* responsividade, se ajusta ao contâiner. TESTAR NO CELULAR PRA VER SE FICOU SHOW */
+    height: 300px;
+  }
 
-/* Remove hyperlink styles */
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Remove underlines from links */
-a {
-    text-decoration: none;
+.container__card {
+    background-color: yellow;
+    max-width: 400px;
 }

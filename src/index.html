@@ -13,73 +13,62 @@
 
 <body>
   <header>
-    <h1>Rota dos Sonhos</h1>
+    <h1 li><a href="index.html">Rota dos Sonhos</a></li>
+    </h1> <!--header solicitado com link para home-->
   </header>
-  <div id="search-section">
-    <div id="org-section">
-      <i class="fa-solid fa-arrow-up-short-wide"></i>
-      <label for="organizer">Organizar</label>
-      <select id="organizer" name="organizar" data-testid="selecionar-ordenar">
-        <option value="select-option"></option>
-        <option value="asc">A-Z</option>
-        <option value="desc">Z-A</option>
-      </select>
+  <nav>
+    <div id="search-section"> <!--divs para pesquisa em cima com o logo ao lado-->
+      <div id="org-section">
+        <i class="fa-solid fa-arrow-up-short-wide"></i>
+        <label for="order">Organizar</label><!--label for para criar campo Organizar-->
+        <select id="order" name="sort-order" data-testid="select-sort"><!--seleciona o organizar em abas-->
+          <option value="Todos" selected hidden disabled></option>
+          <!--Todos inseridos com base no bando de dados (localização) someFeatures-->
+          <option value="asc">A-Z</option>
+          <option value="desc ">Z-A</option>
+        </select>
+      </div>
     </div>
-    <div id="filter-section">
+    <div id="filter-section"><!--mesma coisa só que com o filtro de estados, etc-->
       <i class="fa-solid fa-filter"></i>
       <label for="filters">Filtrar</label>
-      <select id="filters" name="filtrar" data-testid="selecionar-filtro">
-        <optgroup label="Estados" value="states">
-          <option value="select-option"></option>
-        </optgroup>
-        <optgroup label="Itinerário" value="itinerary">
-          <option></option>
-        </optgroup>
-        <optgroup label="Atividades" value="activities">
-          <option></option>
-        </optgroup>
-        <optgroup label="Valor estimado" value="cost">
-          <option></option>
-        </optgroup>
+      <select id="filters" name="search-filter" data-testid="select-filter">
+        <option value="Todos" selected hidden disabled></option>
+        <!--Todos inseridos com base no bando de dados (localização)-->
+        <option value="AL">AL</option>
+        <option value="AM">AM</option>
+        <option value="BA">BA</option>
+        <option value="CE">CE</option>
+        <option value="GO">GO</option>
+        <option value="MA">MA</option>
+        <option value="MG">MG</option>
+        <option value="MS">MS</option>
+        <option value="PA">PA</option>
+        <option value="PE">PE</option>
+        <option value="PR">PR</option>
+        <option value="RJ">RJ</option>
+        <option value="RS">RS</option>
+        <option value="TO">TO</option>
       </select>
     </div>
+
     <div id="button-section">
-      <button id="clear-button" data-testid="botao-limpar" value="clear-search">Limpar Busca</button>
+      <button id="clear-button" data-testid="botao-limpar" value="clear-filters">Buscar</button>
     </div>
-  </div>
-  <main>
-    <div class="main-container">
-      <div id="root">
-        <div class="content">
-          <h2>name</h2>
-          <h3>brState</h3>
-          <p>activities</p>
-          <a href="#">+ Infos</a>
-        </div>
-      </div>
-      <div id="root">
-        <div class="content">
-          <h2>name</h2>
-          <h3>brState</h3>
-          <p>activities</p>
-          <a href="#">+ Infos</a>
-        </div>
-      </div>
-      <div id="root">
-        <div class="content">
-          <h2>name</h2>
-          <h3>brState</h3>
-          <p>activities</p>
-          <a href="#">+ Infos</a>
-        </div>
-      </div>
-    </div>
+  </nav>
+  <br>
+  <main class="container">
+    <section id="root">
+      <!--aqui vamos puxar os cards-->
+    </section>
   </main>
 
   <footer>
-    <div id="credits">
-      <p>Desenvolvido por Débora "Nirvi" Viveiros e Rafaela Anastásio para o Bootcamp de Desenvolvimento Web da
-        Laboratória entre janeiro e fevereiro de 2024.</p>
+    <div class="fixar-rodape">
+      <div id="credits">
+        <p>Desenvolvido por Débora "Nirvi" Viveiros e Rafaela Atanásio para o Bootcamp de Desenvolvimento Web da
+          Laboratória entre janeiro e fevereiro de 2024.</p>
+      </div>
     </div>
   </footer>
   <script src="main.js" type="module"></script>
