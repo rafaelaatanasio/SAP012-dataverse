@@ -6,10 +6,9 @@ import data from './data/dataset.js';
 const root = document.querySelector("#root");
 const button = document.querySelector("#clear-button");
 
-// as ids : search-section, org-section, filter-section, button-section, credits
 
 const comboOrganizar = document.getElementById('order');
-comboOrganizar.addEventListener('change', () => { // colocar .target.valeu.... valores do evento de mudança do clique
+comboOrganizar.addEventListener('change', () => { 
   console.log("clicou em organizar")
 });
 
@@ -18,39 +17,36 @@ comboFiltrar.addEventListener('change', () => {
   console.log("clicou no filtrar")
 });
 
-root.innerHTML=renderItems(data)
+root.innerHTML = renderItems(data)
+
+document.addEventListener('DOMContentLoaded', function () {
+  const comboFiltrar = document.getElementById('filters');
+  const clearButton = document.getElementById('clear-button');
+  const comboOrganizar = document.getElementById('order');
+
+  comboFiltrar.addEventListener('change', function () {
+    // Aqui você pode aplicar a lógica de filtro com base no estado selecionado
+    const selectedState = comboFiltrar.value;
+    console.log('Estado selecionado:', selectedState);
+  });
+
+  clearButton.addEventListener('click', function () {
+    // Aqui você pode limpar o filtro e redefinir a exibição para o estado inicial
+    comboFiltrar.selectedIndex = 0; // Voltar para a opção padrão
+    console.log('Filtro limpo');
+  });
+
+  comboOrganizar.addEventListener('change', function () {
+    // Aqui você pode aplicar a lógica de filtro com base na ordenação selecionada
+    const selectedState = comboOrganizar.value;
+    console.log('Ordernação selecionada:', selectedState);
+  });
+
+  clearButton.addEventListener('click', function () {
+    // Aqui você pode limpar o filtro e redefinir a exibição para o estado inicial
+    comboOrganizar.selectedIndex = 0; // Voltar para a opção padrão
+    console.log('Filtro limpo');
+  });
+});
 
 
-const cards = document.querySelectorAll('.cards li') // ou content__card
-
-comboFiltrar.addEventListener('input, filters')
-
-
-function filters() {
-  if(comboFiltrar.textContent ≠ ""){
-
-    for (let card or cards){
-
-    }
-    let title = cards.querySelector('h2')
-  
-    title = title.textContent.toLowerCase()
-  
-  
-  
-  }
-
-
-
-
-
-
-}
-
-// Recomendamos usar src/main.js para todo o seu código relacionado à exibição dos dados na tela. Basicamente, nos referimos à interação com o DOM. Operações como criação de nós, registro de manipuladores de eventos (event listeners ou event handlers).
-
-// Neste arquivo, você encontrará uma série de imports prontos para carregar as diferentes fontes de dados.
-
-// Por exemplo, os dados com os quais você irá trabalhar, serão encontrados na seguinte linha:
-
-// import data from './data/dataset.js';
