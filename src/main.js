@@ -9,7 +9,7 @@ const button = document.querySelector("#clear-button");
 // as ids : search-section, org-section, filter-section, button-section, credits
 
 const comboOrganizar = document.getElementById('order');
-comboOrganizar.addEventListener('change', () => { // colocar .target.valeu.... valores do evento de mudança do clique
+comboOrganizar.addEventListener('change', () => { // colocar .target.value.... valores do evento de mudança do clique
   console.log("clicou em organizar")
 });
 
@@ -21,29 +21,22 @@ comboFiltrar.addEventListener('change', () => {
 root.innerHTML=renderItems(data)
 
 
-const cards = document.querySelectorAll('.cards li') // ou content__card
+const cards = document.querySelectorAll('.cards li'); // ou content__card
 
-comboFiltrar.addEventListener('input, filters')
+comboFiltrar.addEventListener('input, filters');
 
 
 function filters() {
-  if(comboFiltrar.textContent ≠ ""){
+  if(comboFiltrar.textContent != ""){
 
-    for (let card or cards){
+    for (let card || cards){
 
     }
     let title = cards.querySelector('h2')
   
     title = title.textContent.toLowerCase()
   
-  
-  
   }
-
-
-
-
-
 
 }
 

@@ -1,7 +1,7 @@
 export const renderItems = (data) => {
   // console.log(data)
 
-  let ul = '<ul>';
+  let ul = "<ul>";
 
   data.forEach((item) => {
     ul += `
@@ -12,7 +12,6 @@ export const renderItems = (data) => {
             <dd itemprop="sort-order" class="someFeatures">${item.facts.someFeatures}</dd>
             <dd itemprop="name" class="name">${item.name} - ${item.facts.brState}</dd>
             <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
-            <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
             <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
             <button class='btn-verMais'><dt>Ver mais</dt><dd itemprop="verMais"></dd></button>
           </dl>
@@ -21,6 +20,6 @@ export const renderItems = (data) => {
     `;
   });
 
-  ul += "</ul>"
+  ul += "</ul>";
   return ul;
 };
