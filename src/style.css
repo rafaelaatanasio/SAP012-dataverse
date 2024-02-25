@@ -15,71 +15,106 @@ overflow - pesquisar;
 pesquisar sobre media queries para responsividade
 */
 
+/*pesquisar como add display none para mostrar card com as informações a partir do click em ver + */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-decoration: none;
-}
-
-header {
-    max-width: 90vw;
-    height: 15vh;
-    margin-left: 60px;
-}
-
-h1 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background: green;
-    display: flex;
-    justify-content: center;
-    padding: 15px;
 }
 
 body {
     font-size: 100%;
-    background: rgb(179, 75, 75);
+    background: #f8f4e4;
+}
+
+header {
+    max-width: 90vw;
+    max-height: 15vh;
+    margin-left: 3.75rem;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    padding: 0.9rem;
+    color: #4e3f30;
+    text-decoration: none;
 }
 
 nav {
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
     justify-content: center;
-    font-size: 17px;
+    font-size: 1rem;
 }
 
 #search-section {
-    background: pink;
+    margin: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    text-align: justify;
+    padding: auto;
+    font-size: small;
+    color: #4e3f30;
     border-radius: 1.5rem;
-}
-
-#filter-section {
-    background: purple;
-    border-radius: 1.5rem;
-}
-
-#order {
-    background: red;
-}
-
-#filters {
-    background: red;
 }
 
 #clear-button {
-    font-size: 15px;
-    justify-content: end;
-    border-color: #fefeeb;
-    background-color: #c3f18f;
-    color: #79e72f;
+    margin-left: 1.25rem;
     border-radius: 1.5rem;
+    border-color: #fefeeb;
+    background-color: #fff;
+    color: #4e3f30;
+    padding: 0.05rem 0.5rem;
 }
 
 #clear-button:hover {
-    border-color: #fefeeb;
-    background-color: #f4f5c1;
-    color: #4e3f30;
-    border-radius: 1.5rem;
+    color: #fff;
+    background-color: #a5b3aa;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    align-content: center;
+    justify-content: space-around;
+    row-gap: 30px; /* espaço entre as linhas */
+}
+
+/*classes cards **nesta ordem**
+.image__card
+.someFeatures
+.name
+.bestActivities
+.bestMonth
+.itineraryType
+.btn-verMais
+
+
+/* terminar inserir (li e os demais dd dl que quiser...) e estilizar na ordem de aparição que escolhemos no view/terminal */
+
+
+.someFeatures {
+    color: #79e72f;
+}
+
+.image__card {
+    max-width: 400px; /* responsividade, se ajusta ao contâiner. TESTAR NO CELULAR PRA VER SE FICOU SHOW */
+    height: 300px;
+  }
+
+.container__card {
+    background-color: yellow;
+    max-width: 400px;
 }
 
 footer {
