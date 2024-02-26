@@ -9,11 +9,10 @@ export const renderItems = (data) => {
         <div class="content__card">
           <dl itemscope itemtype="RoteirosDosSonhos">
             <dt><img src="${item.imageUrl}" alt="Imagem do Destino" itemprop="${item.name}" class="image__card" /></dt>
+            <h2 itemprop="name" class="name">${item.name} - ${item.facts.brState}</h2>
             <dd itemprop="sort-order" class="someFeatures">${item.facts.someFeatures}</dd>
-            <dd itemprop="name" class="name">${item.name} - ${item.facts.brState}</dd>
-            <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
-            <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
             <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
+            <dd itemprop="estimatedValue" class="estimatedValue">${item.facts.estimatedValue}</dd>
             <button class='btn-verMais'><dt>Ver mais</dt><dd itemprop="verMais"></dd></button>
           </dl>
         </div>
