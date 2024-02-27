@@ -7,16 +7,6 @@ Paleta de cores:
 .color4 { #f8f4e4 };
 .color5 { #a5b3aa };
 
-grid-template - pesquisar opções
-
-cards {
-position: relative;
-overflow - pesquisar;
-pesquisar sobre media queries para responsividade
-*/
-
-/*pesquisar como add display none para mostrar card com as informações a partir do click em ver + */
-
 /* Estilização para celulares */
 
 
@@ -143,48 +133,99 @@ ul {
 }
 
 .container__card {
+    margin: 0;
     width: 25.5rem;
-    height: 27rem;
-    margin: 1.875rem 2.5rem;
+    height: 475px;
     box-shadow: 1.25rem 1.25rem 2.5rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.95rem;
-    border-top: 0.063rem solid #fefeeb;
-    border-left: 0.063rem solid #fefeeb;
+    border-top: 0.063rem solid #fff;
+    border-left: 0.063rem solid #fff;
     box-sizing: border-box;
+    background-color: #fefeeb;
     border-radius: 0.5rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+    transform: translateY(20px);
+    transition: 0.5s;
 }
-/*classes cards **nesta ordem**
-.image__card
-.h2
-.someFeatures
-.itineraryType
-.estimatedValue
-.btn-verMais
 
-
-/* terminar inserir (li e os demais dd dl que quiser...) e estilizar na ordem de aparição que escolhemos no view/terminal */
-
-
-.someFeatures {
-    color: #79e72f;
+.container__card:hover{
+   transform: translateY(0px);
+   opacity: 1;
 }
 
 .image__card {
+    width: 100%;
     max-width: 400px; /* responsividade, se ajusta ao contâiner. TESTAR NO CELULAR PRA VER SE FICOU SHOW */
     height: 300px;
-  }
+    padding: 0;
+    margin: 2px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+h2{
+    padding: 1px;
+    color: #4e3f30;
+    pointer-events: none;
+    z-index: 1;
+    text-align: center;
+}
 
+.someFeatures, .itineraryType, .estimatedValue {
+    margin: 5px;
+    text-align: left;
+    align-self: center;
+    z-index: 1;
+}
+.btn-verMais {
+    margin: auto;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    border-color: #fefeeb;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bolder;
+    color: #4e3f30;
+}
+
+.btn-verMais:hover {
+    color: #fff;
+    background-color: #a5b3aa;
+}
+/* terminar inserir (li e os demais dd dl que quiser...) 
+e estilizar na ordem de aparição que escolhemos no view/terminal 
+----> verificar se está de acordo*/
 
 /* Footer */
 
 footer {
-    background: #ffab62;
+    background: #a5b3aa;
     width: 100%;
     height: 20px;
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.5;
+    z-index: 1;
 }
 
+p{
+    font-weight: 600;
+
+}
+
+/*pesquisar como add display none para mostrar card com as informações a partir do click em ver + */
 /* Adicionar ícones para LinkedIn e Github de cada estudante */

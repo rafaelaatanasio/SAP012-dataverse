@@ -78,7 +78,7 @@ export default [
   // Objeto 5
   {
     "id": "chapada-veadeiros",
-    "name": "Parque Nacional da Chapada dos Veadeiros",
+    "name": "Chapada dos Veadeiros",
     "shortDescription":
       "Preservação ambiental, cachoeiras magníficas, localizado no coração do Brasil, um destino imperdível para amantes da natureza.",
     "description":
