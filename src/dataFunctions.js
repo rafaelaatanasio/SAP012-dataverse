@@ -1,5 +1,3 @@
-// Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones.
-
 /* Filtragem por Estados */
 
 export const filterData = (data, filterBy, value) => {
@@ -7,40 +5,31 @@ export const filterData = (data, filterBy, value) => {
   return filterState;
 };
 
-/* Organização AZ */
+/* Organização dos Cards (AZ e ZA) */
 
-/*
-uso o sort ou o to Sorted para organizar;
-uso o localeCompare para hierarquizar alfabeticamente
-*/
-
-export const sortAz = (data, sortBy, value) => {
-  const orgData = data.toSorted((a, b) => {
-    a.name[sortBy].localeCompare(b.name[sortBy], "pt-br", "") === value;
-    return orgData;
-  });
+export const sortData = (data, sortBy, value) => {
+  if (value === "asc") {
+    return data.sort((a, b) => {return a[sortBy].name.localeCompare(b[sortBy].name)});
+  } else if (value === "desc") {
+    return data.sort((a, b) => {return a[sortBy].name.localeCompare(b[sortBy].name)}).reverse();
+  } else {
+    return data;
+  }
 };
 
-//     if (placea.name > placeb.name) 
-//       return -1
-//     else if (placea.name < placeb.name) 
-//       return 1
-//     return 0
-// })
-
-/* localeCompare() usa-se para strings 
-/* 
+/* Queria entender se essa lógica de construção faz sentido e como a de cima funciona */
+// const orgData = data.toSorted((a, b) => {
+//   a.name[sortBy].localeCompare(b.name[sortBy], "pt-br", "") === value;
+//   return orgData;
+// });
+// };
 
 /* Organização ZA */
 
-/*
-uso o reverse para inverter a ordem no resultado da organização AZ
-*/
-
-export const sortZa = (data, sortBy, value) => {
-  
-}
-
-// var myArray = ['three', 'two', 'banana', 'one'];
-// myArray.reverse();
-// console.log(myArray);
+// export const sortZa = (data, value) => {
+//   if (value === "des") {
+//     return data.sort((c, d) => {return c.name.localeCompare(d.name)}).reverse();
+//   } else {
+//     return data.sort((c, d) => {return d.name.localeCompare(c.name)}).reverse();
+//   }
+// };

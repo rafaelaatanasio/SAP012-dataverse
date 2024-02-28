@@ -24,14 +24,14 @@
         <select id="order" name="sort-order" data-testid="select-sort"><!--seleciona o organizar em abas-->
           <option value="Todos" selected hidden disabled></option>
           <!--Todos inseridos com base no bando de dados (localização) someFeatures-->
-          <option value="asc">A-Z</option>
-          <option value="desc ">Z-A</option>
+          <option id="asc" value="asc">A-Z</option>
+          <option id="desc" value="des">Z-A</option>
         </select>
       </div>
       <div id="filter-section"><!--mesma coisa só que com o filtro de estados, etc-->
         <i class="fa-solid fa-filter"></i>
-        <label for="filters">Filtrar</label>
-        <select id="filters" name="search-filter" data-testid="select-filter">
+        <label for="filter-state">Filtrar por Estado</label>
+        <select id="filter-state" name="search-filter" data-testid="select-filter">
           <option value="Todos" selected hidden disabled></option>
           <!--Todos inseridos com base no bando de dados (localização)-->
           <option value="AL">AL</option>

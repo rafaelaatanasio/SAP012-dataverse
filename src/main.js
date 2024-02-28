@@ -1,4 +1,4 @@
-import { filterData, sortAz, sortZa } from "./dataFunctions.js";
+import { filterData, sortData } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
@@ -10,10 +10,10 @@ root.innerHTML = renderItems(data);
 /* Pra que serve esse evento? */
 
 document.addEventListener("DOMContentLoaded", function () {
-  const comboFiltrar = document.getElementById("filters");
+  const comboFiltrar = document.getElementById("filter-state");
   const clearButton = document.getElementById("clear-button");
   const comboOrganizar = document.getElementById("order");
-
+ 
   /* Filtro por Estado */
 
   comboFiltrar.addEventListener("change", (event) => {
@@ -28,41 +28,31 @@ document.addEventListener("DOMContentLoaded", function () {
   
   comboOrganizar.addEventListener("change", (event) => {
     // Aqui você pode aplicar a lógica de filtro com base na ordenação selecionada
-    const azOrg = sortAz(data, "name", event.target.value);
-    console.log("Ordenação selecionada:", azOrg);
+    const azOrg = sortData(data, "name", event.target.value);
     root.innerHTML = renderItems(azOrg);
   });
   
   /* Organizar ZA */
 
-  comboOrganizar.addEventListener("change", (event) => {
-    // Aqui você pode aplicar a lógica de filtro com base na ordenação selecionada
-    const zaOrg = sortZa(data, "name", event.target.value);
-    console.log("Ordenação selecionada:", zaOrg);
-    root.innerHTML = renderItems(zaOrg);
-  });
+  // comboOrganizar.addEventListener("change", (event) => {
+  //   const zaOrg = sortZa(data, "name", event.target.value);
+  //   root.innerHTML = renderItems(zaOrg);
+  // });
 
-  /* Limpar Filtro */
+  /* Limpar Filtro e Organização */
 
   //posso adicionar um evento que retorne o filtro e a organização para o estado inicial?
   clearButton.addEventListener("click", function () {
-    // Aqui você pode limpar o filtro e redefinir a exibição para o estado inicial
-    comboFiltrar.selectedIndex = 0; // Voltar para a opção padrão
-    console.log("Filtro limpo");
+    comboOrganizar.selectedIndex = 0;
+    comboFiltrar.selectedIndex = 0;
+    root.innerHTML = renderItems(data);
   });
 
-  /* Limpar Organização */
+  /* inserir evento de clique "Ver mais" */
 
-  clearButton.addEventListener("click", function () {
-    // Aqui você pode limpar o filtro e redefinir a exibição para o estado inicial
-    comboOrganizar.selectedIndex = 0; // Voltar para a opção padrão
-    console.log("Filtro limpo");
+  /* Botão "Ver mais" - Cards */
+  document.querySelectorAll('.btn-verMais').addEventListener("click", function() {
+    console.log("clicou");
   });
-});
 
-/* inserir evento de clique "Ver mais" */
-
-/* Botão "Ver mais" - Cards */
-document.querySelectorAll('.btn-verMais').addEventListener("click", function() {
-console.log("clicou");
 });
