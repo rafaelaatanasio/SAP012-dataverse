@@ -1,4 +1,4 @@
-import { filterData, sortData } from "./dataFunctions.js";
+import { filterData, sortAz, sortZa } from "./dataFunctions.js";
 import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
@@ -28,17 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
   
   comboOrganizar.addEventListener("change", (event) => {
     // Aqui você pode aplicar a lógica de filtro com base na ordenação selecionada
-    const azOrg = sortData(data, "name", event.target.value);
+    const azOrg = sortAz(data, "name", event.target.value);
     console.log("Ordenação selecionada:", azOrg);
     root.innerHTML = renderItems(azOrg);
   });
   
   /* Organizar ZA */
 
-  comboOrganizar.addEventListener("change", function () {
+  comboOrganizar.addEventListener("change", (event) => {
     // Aqui você pode aplicar a lógica de filtro com base na ordenação selecionada
-    const selectedState = comboOrganizar.value;
-    console.log("Ordenação selecionada:", selectedState);
+    const zaOrg = sortZa(data, "name", event.target.value);
+    console.log("Ordenação selecionada:", zaOrg);
+    root.innerHTML = renderItems(zaOrg);
   });
 
   /* Limpar Filtro */
@@ -57,4 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     comboOrganizar.selectedIndex = 0; // Voltar para a opção padrão
     console.log("Filtro limpo");
   });
+});
+
+/* inserir evento de clique "Ver mais" */
+
+/* Botão "Ver mais" - Cards */
+document.querySelectorAll('.btn-verMais').addEventListener("click", function() {
+console.log("clicou");
 });

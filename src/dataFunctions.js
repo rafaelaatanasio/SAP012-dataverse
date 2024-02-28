@@ -9,35 +9,38 @@ export const filterData = (data, filterBy, value) => {
 
 /* Organização AZ */
 
-export const sortData = (data, sortBy, value) => {
-  data.sort((a, b) => {
-    const placeA = a.name[sortBy].toUpperCase() === value,
-      placeB = b.name[sortBy].toUpperCase() === value;
-    return placeA === placeB ? 0 : placeA > placeB ? 1 : -1;
-  })
+/*
+uso o sort ou o to Sorted para organizar;
+uso o localeCompare para hierarquizar alfabeticamente
+*/
+
+export const sortAz = (data, sortBy, value) => {
+  const orgData = data.toSorted((a, b) => {
+    a.name[sortBy].localeCompare(b.name[sortBy], "pt-br", "") === value;
+    return orgData;
+  });
 };
+
 //     if (placea.name > placeb.name) 
 //       return -1
 //     else if (placea.name < placeb.name) 
 //       return 1
 //     return 0
 // })
-//   return orgData.toSorted();
 
-
-
-//   return [];
-// };
-
+/* localeCompare() usa-se para strings 
 /* 
-para a organização, preciso que o filtro reorganize os 24 itens em ordem alfabética pelo "name"
-1) preciso que identifique os nomes dos objetos; - usar querySelector?
-2) preciso de um filtro que reorganize, em ordem crescente e decrescente, os itens do banco de dados;
+
+/* Organização ZA */
+
+/*
+uso o reverse para inverter a ordem no resultado da organização AZ
 */
+
+export const sortZa = (data, sortBy, value) => {
+  
+}
+
 // var myArray = ['three', 'two', 'banana', 'one'];
 // myArray.reverse();
 // console.log(myArray);
-
-/* const dataAz = data.toSorted((element) => element.name[sortBy] === value);
-  console.log(dataAz);
-  return dataAz; */
