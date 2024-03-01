@@ -4,7 +4,7 @@ export default [
     "id": "fernando-de-noronha",
     "name": "Fernando de Noronha",
     "shortDescription":
-      "Arquipélago vulcânico, praias paradisíacas, mergulho incrível, situado em Pernambuco, é um destino imperdível para amantes da natureza e ecoturismo.",
+      "Arquipélago vulcânico e praias paradisíacas em Pernambuco. Um destino imperdível para amantes da natureza e ecoturismo.",
     "description":
       "Fernando de Noronha, um arquipélago localizado em Pernambuco, é um paraíso ecológico no Atlântico. Oferece praias intocadas e vida marinha exuberante. Ideal para mulheres e pessoas LGBT em busca de tranquilidade e beleza natural. Mergulhe nas águas cristalinas, faça trilhas e desfrute de praias paradisíacas. Além das atividades mencionadas, os visitantes podem explorar a rica vida marinha através de mergulhos guiados. Com uma cultura local vibrante, a ilha proporciona experiências únicas de gastronomia. Desfrute de um paraíso que combina natureza preservada e hospitalidade acolhedora. Mais informações aqui.",
     "imageUrl":

@@ -3,56 +3,49 @@ import { renderItems } from "./view.js";
 import data from "./data/dataset.js";
 
 /* Renderizar cards */
-
 const root = document.querySelector("#root");
 root.innerHTML = renderItems(data);
 
-/* Pra que serve esse evento? */
-
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () { /* Pra que serve esse evento? */
   const comboFiltrar = document.getElementById("filter-state");
   const clearButton = document.getElementById("clear-button");
   const comboOrganizar = document.getElementById("order");
  
   /* Filtro por Estado */
-
   comboFiltrar.addEventListener("change", (event) => {
-    // Aqui você pode aplicar a lógica de filtro com base no estado selecionado
-    //1 etapa: chamar a função de filtro no data function. 2 etapa: com o retorno da função, renderizar novamente os cards com uma lista nova (poderia usar o map)
     const selectedState = filterData(data, "brState", event.target.value);
-    console.log("Estado selecionado:", selectedState);
     root.innerHTML = renderItems(selectedState);
   });
   
-  /* Organizar AZ */
-  
+  /* Organizar AZ e ZA*/
   comboOrganizar.addEventListener("change", (event) => {
-    // Aqui você pode aplicar a lógica de filtro com base na ordenação selecionada
-    const azOrg = sortData(data, "name", event.target.value);
-    root.innerHTML = renderItems(azOrg);
+    const orgData = sortData(data, "name", event.target.value);
+    root.innerHTML = renderItems(orgData);
   });
-  
-  /* Organizar ZA */
-
-  // comboOrganizar.addEventListener("change", (event) => {
-  //   const zaOrg = sortZa(data, "name", event.target.value);
-  //   root.innerHTML = renderItems(zaOrg);
-  // });
 
   /* Limpar Filtro e Organização */
-
-  //posso adicionar um evento que retorne o filtro e a organização para o estado inicial?
-  clearButton.addEventListener("click", function () {
+  clearButton.addEventListener("click", () => {
     comboOrganizar.selectedIndex = 0;
     comboFiltrar.selectedIndex = 0;
-    root.innerHTML = renderItems(data);
+    root.innerHTML = renderItems(data); // não está voltando à organização inicial, ou seja, não está limpando a organização
   });
 
-  /* inserir evento de clique "Ver mais" */
+  /* Modal */
+  // const modal = document.getElementById("myModal");
+  // const btnVerMais = document.getElementById("${item.id}"); // tentei puxar pela classe, mas também não funcionou
+  // const span = document.querySelector('.close')[0];
+    
+  // btnVerMais.addEventListener("click", function() {
+  //   modal.style.display = "block";
+  // });
 
-  /* Botão "Ver mais" - Cards */
-  document.querySelectorAll('.btn-verMais').addEventListener("click", function() {
-    console.log("clicou");
-  });
+  // span.addEventListener("click", function() {
+  //   modal.style.display = "none";
+  // });
 
+  // window.addEventListener("click", (event) => {
+  //   if (event.target === modal) {
+  //     modal.style.display = "none";
+  //   }
+  // });
 });

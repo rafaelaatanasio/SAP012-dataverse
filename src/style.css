@@ -38,8 +38,13 @@ Paleta de cores:
 }
 
 body {
+    max-width:fit-content;
+    min-width: fit-content;
+    max-height: fit-content;
+    min-height: fit-content;
     font-size: 100%;
-    background: #f8f4e4;
+    background: linear-gradient(45deg, #0ca5b0, #f8f4e4);
+    margin-bottom: 50px;
 }
 
 /* Título */
@@ -136,26 +141,53 @@ ul {
     margin: 0;
     width: 25.5rem;
     height: 475px;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+
+.container__card:hover .content__card{
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.content__card{
+    position: relative;
+    width: 100%;
+    height: 100%;
     box-shadow: 1.25rem 1.25rem 2.5rem rgba(0, 0, 0, 0.5);
     border-top: 0.063rem solid #fff;
     border-left: 0.063rem solid #fff;
-    box-sizing: border-box;
     background-color: #fefeeb;
-    border-radius: 0.5rem;
-    display: flex;
-    position: relative;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    z-index: 1;
-    transform: translateY(20px);
-    transition: 0.5s;
+    box-sizing: border-box;
+    transition: transform 1500ms;
+    transform-style: preserve-3d; /* não está funcionando */
 }
 
-.container__card:hover{
-   transform: translateY(0px);
-   opacity: 1;
+.container__card, .content__card, .front, .back {
+    border-radius: 0.5rem;
 }
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front, .back{
+    background: #fefeeb;
+}
+
+.back{
+    opacity: 0.5;
+    transform: rotateY(180deg);
+}
+
+/* Cards - Frente */
 
 .image__card {
     width: 100%;
@@ -174,17 +206,42 @@ h2{
     padding: 1px;
     color: #4e3f30;
     pointer-events: none;
-    z-index: 1;
     text-align: center;
+}
+
+.shortDescription {
+    margin: 9px;
+    text-align: center;
+    font-size: 13px;
+    color:#4e3f30;
 }
 
 .someFeatures, .itineraryType, .estimatedValue {
     margin: 5px;
     text-align: left;
-    align-self: center;
-    z-index: 1;
+    color:#4e3f30;
 }
-.btn-verMais {
+
+/* Cards - Verso */
+
+.description {
+    margin: 30px;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #4e3f30;
+    font-weight: bolder;
+}
+
+.bestActivities, .bestMonth {
+    margin: 15px;
+    text-align: center;
+    color: #4e3f30;
+}
+
+/* Modal */
+
+/* .btn-verMais {
     margin: auto;
     padding: 8px 10px;
     display: flex;
@@ -202,6 +259,42 @@ h2{
     color: #fff;
     background-color: #a5b3aa;
 }
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  } */
 /* terminar inserir (li e os demais dd dl que quiser...) 
 e estilizar na ordem de aparição que escolhemos no view/terminal 
 ----> verificar se está de acordo*/
@@ -218,13 +311,13 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    opacity: 0.5;
+    opacity: 0.8;
     z-index: 1;
 }
 
 p{
+    color:#4e3f30;;
     font-weight: 600;
-
 }
 
 /*pesquisar como add display none para mostrar card com as informações a partir do click em ver + */

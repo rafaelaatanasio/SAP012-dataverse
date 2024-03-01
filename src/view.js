@@ -5,15 +5,22 @@ export const renderItems = (data) => {
 
   data.forEach((item) => {
     ul += `
-      <li itemscope itemtype="Rota dos Sonhos" class="container__card">
-        <div class="content__card">
-          <dl itemscope itemtype="RoteirosDosSonhos">
-            <dt><img src="${item.imageUrl}" alt="Imagem do Destino" itemprop="${item.name}" class="image__card" /></dt>
-            <h2 itemprop="name" class="name">${item.name} - ${item.facts.brState}</h2>
-            <dd itemprop="sort-order" class="someFeatures">${item.facts.someFeatures}</dd>
-            <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
-            <dd itemprop="estimatedValue" class="estimatedValue">${item.facts.estimatedValue}</dd>
-            <button class='btn-verMais'><dt>Ver mais</dt><dd itemprop="verMais"></dd></button>
+      <li itemscope itemtype="Rota dos Sonhos" class="list__card">
+        <div class="container__card">
+          <dl itemscope itemtype="RoteirosDosSonhos" class="content__card">
+            <div class="front">
+              <dt><img src="${item.imageUrl}" alt="Imagem do Destino" itemprop="${item.name}" class="image__card" /></dt>
+              <h2 itemprop="name" class="name">${item.name} - ${item.facts.brState}</h2>
+              <dd itemprop="shortDescription" class="shortDescription">${item.shortDescription}</dd>
+              <dd itemprop="sort-order" class="someFeatures">${item.facts.someFeatures}</dd>
+              <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
+              <dd itemprop="estimatedValue" class="estimatedValue">${item.facts.estimatedValue}</dd>
+            </div>
+            <div class="back">
+              <dd itemprop="description" class="description">${item.description}</dd>
+              <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
+              <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
+            </div>
           </dl>
         </div>
       </li>
@@ -23,3 +30,16 @@ export const renderItems = (data) => {
   ul += "</ul>"
   return ul;
 };
+
+
+/* Tentativa de aplicação modal
+<button id="${item.id}" class="btn-verMais"><dt>Ver mais</dt><dd itemprop="verMais"></dd></button>
+              <div id="myModal" class="modal">
+                <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <dd itemprop="description" class="description">${item.description}</dd>
+                  <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
+                  <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
+                </div>
+              </div>
+*/
