@@ -8,10 +8,11 @@ export const filterData = (data, filterBy, value) => {
 /* Organização dos Cards (AZ e ZA) */
 
 export const sortData = (data, sortBy, value) => {
+  const copyData = [...data]; 
   if (value === "asc") {
-    return data.toSorted((a, b) => {return a[sortBy].localeCompare(b[sortBy])});
+    return copyData.sort((a, b) => {return a[sortBy].localeCompare(b[sortBy])});
   } else if (value === "desc") {
-    return data.toSorted((c, d) => {return c[sortBy].localeCompare(d[sortBy])}).reverse();
+    return copyData.sort((c, d) => {return c[sortBy].localeCompare(d[sortBy])}).reverse();
   } else {
     return data;
   }
@@ -21,6 +22,3 @@ export const sortData = (data, sortBy, value) => {
 // export const computeStats = (data) => { 
 //   return "computeStats"
 // }
-
-/* spread operator - const copyData = [...data]; 
-ver testes - toSorted */

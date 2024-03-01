@@ -7,9 +7,9 @@ const root = document.querySelector("#root");
 root.innerHTML = renderItems(data);
 
 document.addEventListener("DOMContentLoaded", function () { /* Pra que serve esse evento? */
-  const comboFiltrar = document.getElementById("filter-state");
-  const clearButton = document.getElementById("clear-button");
-  const comboOrganizar = document.getElementById("order");
+  const comboFiltrar = document.querySelector('#filter-state');
+  const clearButton = document.querySelector('#clear-button');
+  const comboOrganizar = document.querySelector('#order');
  
   /* Filtro por Estado */
   comboFiltrar.addEventListener("change", (event) => {
