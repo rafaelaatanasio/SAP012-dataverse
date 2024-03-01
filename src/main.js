@@ -30,22 +30,4 @@ document.addEventListener("DOMContentLoaded", function () { /* Pra que serve ess
     root.innerHTML = renderItems(data); // não está voltando à organização inicial, ou seja, não está limpando a organização
   });
 
-  /* Modal */
-  // const modal = document.getElementById("myModal");
-  // const btnVerMais = document.getElementById("${item.id}"); // tentei puxar pela classe, mas também não funcionou
-  // const span = document.querySelector('.close')[0];
-    
-  // btnVerMais.addEventListener("click", function() {
-  //   modal.style.display = "block";
-  // });
-
-  // span.addEventListener("click", function() {
-  //   modal.style.display = "none";
-  // });
-
-  // window.addEventListener("click", (event) => {
-  //   if (event.target === modal) {
-  //     modal.style.display = "none";
-  //   }
-  // });
 });
