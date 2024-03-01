@@ -1,4 +1,5 @@
 export const renderItems = (data) => {
+export const renderItems = (data) => {
   // console.log(data)
 
   let ul = '<ul>';
