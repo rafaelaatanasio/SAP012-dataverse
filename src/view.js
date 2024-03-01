@@ -30,16 +30,3 @@ export const renderItems = (data) => {
   ul += "</ul>"
   return ul;
 };
-
-
-/* Tentativa de aplicação modal
-<button id="${item.id}" class="btn-verMais"><dt>Ver mais</dt><dd itemprop="verMais"></dd></button>
-              <div id="myModal" class="modal">
-                <div class="modal-content">
-                  <span class="close">&times;</span>
-                  <dd itemprop="description" class="description">${item.description}</dd>
-                  <dd itemprop="bestActivities" class="bestActivities">${item.facts.bestActivities}</dd>
-                  <dd itemprop="bestMonth" class="bestMonth">${item.facts.bestMonth}</dd>
-                </div>
-              </div>
-*/
