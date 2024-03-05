@@ -1,20 +1,19 @@
 /* Filtragem por Estados */
 
-export const filterData = (data, filterBy, value) => {
-  const filterState = data.filter((element) => element.facts[filterBy] === value);
+export const filterData = (dataFilter, filterBy, value) => {
+  const filterState = dataFilter.filter((element) => element.facts[filterBy] === value);
   return filterState;
 };
 
 /* Organização dos Cards (AZ e ZA) */
 
-export const sortData = (data, sortBy, value) => {
-  const copyData = [...data]; 
+export const sortData = (dataFilter, sortBy, value) => { 
   if (value === "asc") {
-    return copyData.sort((a, b) => {return a[sortBy].localeCompare(b[sortBy])});
+    return dataFilter.sort((a, b) => {return a[sortBy].localeCompare(b[sortBy])});
   } else if (value === "desc") {
-    return copyData.sort((c, d) => {return c[sortBy].localeCompare(d[sortBy])}).reverse();
+    return dataFilter.sort((c, d) => {return c[sortBy].localeCompare(d[sortBy])}).reverse();
   } else {
-    return data;
+    return dataFilter;
   }
 };
 

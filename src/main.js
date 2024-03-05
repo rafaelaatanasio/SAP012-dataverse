@@ -6,20 +6,21 @@ import data from "./data/dataset.js";
 const root = document.querySelector("#root");
 root.innerHTML = renderItems(data);
 
-document.addEventListener("DOMContentLoaded", function () { /* Pra que serve esse evento? */
+document.addEventListener("DOMContentLoaded", function () {
   const comboFiltrar = document.querySelector('#filter-state');
-  const clearButton = document.querySelector('#clear-button');
+  const clearButton = document.querySelector('#button-clear');
   const comboOrganizar = document.querySelector('#order');
+  const dataFilter = [...data];
  
   /* Filtro por Estado */
   comboFiltrar.addEventListener("change", (event) => {
-    const selectedState = filterData(data, "brState", event.target.value);
+    const selectedState = filterData(dataFilter, "brState", event.target.value);
     root.innerHTML = renderItems(selectedState);
   });
   
   /* Organizar AZ e ZA*/
   comboOrganizar.addEventListener("change", (event) => {
-    const orgData = sortData(data, "name", event.target.value);
+    const orgData = sortData(dataFilter, "name", event.target.value);
     root.innerHTML = renderItems(orgData);
   });
 
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () { /* Pra que serve ess
   clearButton.addEventListener("click", () => {
     comboOrganizar.selectedIndex = 0;
     comboFiltrar.selectedIndex = 0;
-    root.innerHTML = renderItems(data); // não está voltando à organização inicial, ou seja, não está limpando a organização
+    root.innerHTML = renderItems(data);
   });
 
 });
