@@ -21,3 +21,9 @@ export const sortData = (dataFilter, sortBy, value) => {
 // export const computeStats = (data) => { 
 //   return "computeStats"
 // }
+
+/* export const computeStats = (data) => { 
+  const estatistica = data.map(destinos => destinos.facts.brState).filter(value => !isNaN(value));
+  const contador = estatistica.reduce((acc) => acc + 1, 0);
+  console.log(contador);
+  return contador; */
