@@ -66,3 +66,4 @@ document.addEventListener("DOMContentLoaded", function () {
 document.querySelectorAll('.btn-verMais').addEventListener("click", function() {
 console.log("clicou");
 });
+
