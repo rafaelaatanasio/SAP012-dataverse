@@ -10,11 +10,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const comboFiltrar = document.querySelector('#filter-state');
   const clearButton = document.querySelector('#button-clear');
   const comboOrganizar = document.querySelector('#order');
-  const dataFilter = [...data];
+  let dataFilter = [...data];
  
   /* Filtro por Estado */
   comboFiltrar.addEventListener("change", (event) => {
-    const selectedState = filterData(dataFilter, "brState", event.target.value);
+    const selectedState = filterData(data, "brState", event.target.value);
+    console.log(selectedState);
+    dataFilter = selectedState;
     root.innerHTML = renderItems(selectedState);
   });
   

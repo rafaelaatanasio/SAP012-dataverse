@@ -64,6 +64,7 @@ header { /*não estou conseguindo centralizar*/
 h1 {
     padding: 0.9rem;
     color: #4e3f30;
+    font-size: 50px;
 }
 
 a #titulo{
@@ -98,10 +99,9 @@ select{
     border-radius: 10px;
     padding: 0.3rem;
     size-adjust: auto;
-    text-align: center; /* não funciona */
 }
 
-#clear-button {
+#button-clear {
     margin-left: 1.25rem;
     border-radius: 1.5rem;
     border-color: #fefeeb;
@@ -111,7 +111,7 @@ select{
     padding: 0.06rem 0.8rem;
 }
 
-#clear-button:hover {
+#button-clear:hover {
     color: #fff;
     background-color: #a5b3aa;
 }
