@@ -37,11 +37,6 @@ body {
 }
 
 /* Título */
-/* Problemas:
-1) Não consigo centralizar o título - OK
-2) Não consigo tirar o text-decoration - OK
-3) Não consigo ser feliz :'( - ISSO É MAIS DIFÍCIL KKK
-*/
 
 header {
     text-align: center;
@@ -49,13 +44,18 @@ header {
     padding: 10px 5px;
 }
 
+
+h1 {
+    padding: 0.9rem;
+    color: #4e3f30;
+    font-size: 3.1rem;
+
 #titulo {
-    color: #500d9c;
+    color: #4e3f30;
     text-decoration: none;
     /* remove a decoração do hiperlink */
     cursor: default;
     /* opcionalllll: define o cursor como padrão para indicar que não é um link */
-    font-size: 50px;
 }
 
 header h3 {
@@ -102,8 +102,9 @@ select {
 }
 
 #button-clear {
-    margin-left: 20px;
-    border-radius: 24px;
+
+    margin-left: 1.25rem;
+    border-radius: 1.5rem;
     border-color: #fefeeb;
     background-color: #fff;
     font-size: 15px;
@@ -152,40 +153,33 @@ ul {
     transform: rotateY(180deg);
 }
 
-.content__card {
+
+.content__card{
     position: relative;
     width: 100%;
     height: 100%;
-    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5);
-    border-top: 1.008px solid #fff;
-    border-left: 1.008px solid #fff;
+    box-shadow: 1.25rem 1.25rem 2.5rem rgba(0, 0, 0, 0.5);
+    border-top: 0.063rem solid #fff;
+    border-left: 0.063rem solid #fff;
     background-color: #fefeeb;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
     transition: transform 1500ms;
-    transform-style: preserve-3d;
-    /* não está funcionando */
+
+    transform-style: preserve-3d; /* não está funcionando */
 }
 
-.container__card,
-.content__card,
-.front,
-.back {
-    border-radius: 8px;
+.container__card, .content__card, .front, .back {
+    border-radius: 0.5rem;
 }
 
-.front,
-.back {
+.front, .back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-}
-
-.front,
-.back {
     background: #fefeeb;
 }
 
@@ -204,7 +198,7 @@ ul {
     padding: 0;
     margin: 2px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,15 +215,13 @@ h2 {
     margin: 9px;
     text-align: center;
     font-size: 13px;
-    color: #4e3f30;
+    color:#4e3f30;
 }
 
-.someFeatures,
-.itineraryType,
-.estimatedValue {
+.someFeatures, .itineraryType, .estimatedValue {
     margin: 5px;
     text-align: left;
-    color: #4e3f30;
+    color:#4e3f30;
 }
 
 /* Cards - Verso */
@@ -243,8 +235,7 @@ h2 {
     font-weight: bolder;
 }
 
-.bestActivities,
-.bestMonth {
+.bestActivities, .bestMonth {
     margin: 15px;
     text-align: center;
     color: #4e3f30;
@@ -266,8 +257,8 @@ footer {
     z-index: 1;
 }
 
-p {
-    color: #4e3f30;
+p{
+    color:#4e3f30;;
     font-weight: 600;
 }
 

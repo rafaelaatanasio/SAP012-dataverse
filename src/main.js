@@ -40,4 +40,3 @@ document.querySelector(#root).innerHTML = renderItems(data);
 //appendChild(elementos) => retorna um elemento HTML criado
 
 // filtrar => retornar um array de 5 elementos
-

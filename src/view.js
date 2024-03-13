@@ -13,6 +13,7 @@ export const renderItems = (data) => {
               <dd itemprop="shortDescription" class="shortDescription">${item.shortDescription}</dd>
               <dd itemprop="caracteristicas" class="someFeatures">${item.facts.someFeatures}</dd>
               <dd itemprop="itineraryType" class="itineraryType">${item.facts.itineraryType}</dd>
+              <dd itemprop="estimatedValue" class="estimatedValue">${item.facts.estimatedValue}</dd>
             </div>
             <div class="back">
               <dd itemprop="description" class="description">${item.description}</dd>
