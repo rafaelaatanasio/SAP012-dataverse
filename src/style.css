@@ -8,7 +8,7 @@ Paleta de cores:
 .color5 { #a5b3aa };
 
 /* Estilização para celulares */
-
+@media (max-width: 767px) {}
 
 /* Estilização para tablets */
 @media (min-width: 768px) and (max-width: 1024px) {}
