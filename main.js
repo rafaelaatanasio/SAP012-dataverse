@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function () {
   /* Filtro por Estado */
   comboFiltrar.addEventListener("change", (event) => {
     const selectedState = filterData(data, "brState", event.target.value);
-    console.log(selectedState);
     dataFilter = selectedState;
     root.innerHTML = renderItems(selectedState);
   });
@@ -35,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-document.querySelector(#root).innerHTML = renderItems(data);
+//document.querySelector(#root).innerHTML = renderItems(data);
 //innerHTML => renderItems retorna uma string
 //appendChild(elementos) => retorna um elemento HTML criado
 
