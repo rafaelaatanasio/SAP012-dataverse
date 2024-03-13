@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   clearButton.addEventListener("click", () => {
     comboOrganizar.selectedIndex = 0;
     comboFiltrar.selectedIndex = 0;
-    root.innerHTML = renderItems(data);
+    return root.innerHTML = renderItems(data);
   });
 
 });
