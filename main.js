@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   clearButton.addEventListener("click", () => {
     comboOrganizar.selectedIndex = 0;
     comboFiltrar.selectedIndex = 0;
-    root.innerHTML = renderItems(data);
+    return root.innerHTML = renderItems(data);
   });
 
 });
@@ -38,4 +38,4 @@ document.addEventListener("DOMContentLoaded", function () {
 //innerHTML => renderItems retorna uma string
 //appendChild(elementos) => retorna um elemento HTML criado
 
-// filtrar => retornar um array de 5 elementos
+// filtrar => retornar um array de 5 elementos!
