@@ -34,3 +34,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+document.querySelector(#root).innerHTML = renderItems(data);
+//innerHTML => renderItems retorna uma string
+//appendChild(elementos) => retorna um elemento HTML criado
+
+// filtrar => retornar um array de 5 elementos
+
